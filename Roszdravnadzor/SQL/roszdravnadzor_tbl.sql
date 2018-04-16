@@ -1,5 +1,35 @@
 
-
+CREATE TABLE [dbo].[d2a_zhnvls_roszdrav](
+	[DrugID] [varchar](1000) NULL,
+	[TradeNmR] [varchar](1000) NULL,
+	[InnR] [varchar](1000) NULL,
+	[PackNx] [varchar](1000) NULL,
+	[DosageR] [varchar](1000) NULL,
+	[PackQn] [varchar](1000) NULL,
+	[Pack] [varchar](1000) NULL,
+	[DrugFmNmRS] [varchar](1000) NULL,
+	[Segment] [varchar](1000) NULL,
+	[Year] [varchar](1000) NULL,
+	[Month] [varchar](1000) NULL,
+	[Series] [varchar](1000) NULL,
+	[TotDrugQn] [varchar](1000) NULL,
+	[MnfPrice] [varchar](1000) NULL,
+	[PrcPrice] [varchar](1000) NULL,
+	[RtlPrice] [varchar](1000) NULL,
+	[Funds] [varchar](1000) NULL,
+	[VendorID] [varchar](1000) NULL,
+	[Remark] [varchar](1000) NULL,
+	[SrcOrg] [varchar](1000) NULL,
+	[EAN] [varchar](1000) NULL,
+	[MaxMnfPrice] [varchar](1000) NULL,
+	[ExpiTermR] [varchar](1000) NULL,
+	[ClNm] [varchar](1000) NULL,
+	[MnfNm] [varchar](1000) NULL,
+	[PckNm] [varchar](1000) NULL,
+	[RegNr] [varchar](1000) NULL,
+	[RegDate] [varchar](1000) NULL
+) ON [PRIMARY]
+/*
 CREATE TABLE [dbo].[d2a_zhnvls_roszdrav](
 	[PackNx] [varchar](1000) NULL,
 	[MnfID] [varchar](1000) NULL,
@@ -21,4 +51,4 @@ CREATE TABLE [dbo].[d2a_zhnvls_roszdrav](
 	[MaxMnfPrice] [varchar](1000) NULL,
 	[CurrencyNm] [varchar](1000) NULL,
 	[DrugID] [varchar](50) NULL
-) ON [PRIMARY]
+) ON [PRIMARY] */
