@@ -1,0 +1,10 @@
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.pdb
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csprojResolveAssemblyReference.cache
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Form1.resources
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Properties.Resources.resources
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.GenerateResource.Cache
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.CoreCompileInputs.cache
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.exe
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.pdb
+c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe.config
