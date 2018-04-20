@@ -33,7 +33,7 @@ namespace Roszdravnadzor
             //using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.farmaConnectionString))
             //{
             SqlConnection connection = new SqlConnection(Properties.Settings.Default.farmaConnectionString);
-                String gsql = GetSQLFromResource("Roszdravnadzor.Roszdrav.sql");
+                String gsql = GetSQLFromResource("Roszdravnadzor.SQL.Roszdrav.sql");
                 connection.Open();
 
                     timer1.Enabled = true;
