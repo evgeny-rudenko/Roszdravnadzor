@@ -82,6 +82,7 @@
   <ItemGroup>
     <Content Include="SQL\formatdatetime.sql" />
     <Content Include="SQL\contractors.sql" />
+    <Content Include="SQL\getseries.sql" />
     <Content Include="SQL\goods.sql" />
     <Content Include="SQL\roszdravnadzor_tbl.sql" />
   </ItemGroup>
