@@ -8,3 +8,12 @@ c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnad
 c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.exe
 c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.pdb
 c:\users\evgeny\source\repos\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe.config
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe.config
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.pdb
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csprojAssemblyReference.cache
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Form1.resources
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Properties.Resources.resources
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.GenerateResource.cache
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.exe
+C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.pdb

@@ -33,7 +33,7 @@ namespace Roszdravnadzor
             //using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.farmaConnectionString))
             //{
             SqlConnection connection = new SqlConnection(Properties.Settings.Default.farmaConnectionString);
-                String gsql = GetSQLFromResource("Roszdravnadzor.SQL.Roszdrav.sql");
+                String gsql = GetSQLFromResource("Roszdravnadzor.SQL.Roszdrav-Zdor.sql");
                 connection.Open();
 
                     timer1.Enabled = true;
@@ -94,45 +94,131 @@ namespace Roszdravnadzor
 
 
         }
+        /*  private  void ExportTable(SqlConnection connection, string tableName, string fName)
+          {
+              fName = DateTime.Now.Year.ToString()+ DateTime.Now.Month.ToString()+".csv";// Properties.Settings.Default.ID + "_" + Properties.Settings.Default.SubID + "_" + DateTime.Now.ToString("yyyyMMdd") + "T" + DateTime.Now.ToString("HHmm") + fName;
+
+
+
+             // Console.WriteLine("Writing " + fName);
+              using (var output = new StreamWriter(Path.Combine(Properties.Settings.Default.ExportPath, fName), false, Encoding.GetEncoding("Windows-1251"))) // добавить дату fname
+              {
+                  using (var cmd = connection.CreateCommand())
+                  {
+                      cmd.CommandTimeout = 0;
+                      cmd.CommandText = tableName;
+                      using (var reader = cmd.ExecuteReader())
+                      {
+
+                          //output.WriteLine("DrugID;PackNx;MnfID;PckID;Segment;Year;Month;IRECID;Series;Quantity;Funds;VendorID;MnfPrice;PrcPrice;RtlPrice;Remark;SrcOrg");
+                            output.WriteLine("DrugID;Segment;Year;Month;Series;TotDrugQn;MnfPrice;PrcPrice;RtlPrice;Funds;VendorID;Remark;SrcOrg");
+
+                          while (reader.Read())
+                          {
+                              for (int i = 0; i < reader.FieldCount; i++)
+                              {
+
+                                  //    output.Write('|');
+                                  String v = reader[i].ToString();
+
+                                  output.Write(v);
+                              }
+                              //output.Write("|"); // в конце строки разделитель не ставим
+                              output.WriteLine();
+                          }
+                      }
+                  }
+              }
+
+              timer1.Enabled = false;
+             // button1.Enabled = true;
+          } */
         private  void ExportTable(SqlConnection connection, string tableName, string fName)
         {
-            fName = DateTime.Now.Year.ToString()+ DateTime.Now.Month.ToString()+".csv";// Properties.Settings.Default.ID + "_" + Properties.Settings.Default.SubID + "_" + DateTime.Now.ToString("yyyyMMdd") + "T" + DateTime.Now.ToString("HHmm") + fName;
+            //fName = DateTime.Now.ToString("yyyy-MM-dd ") + "~" + Properties.Settings.Default.SubID + fName;
+            // fName = DateTime.Now.ToString() + "~" + Properties.Settings.Default.SubID + fName;
+            // fName = DateTime.Now.ToString() + "~" + fName;
+            fName = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + ".csv";// Properties.Settings.Default.ID + "_" + Properties.Settings.Default.SubID + "_" + DateTime.Now.ToString("yyyyMMdd") + "T" + DateTime.Now.ToString("HHmm") + fName;
+            String pPath = Directory.GetCurrentDirectory();
+            if (Properties.Settings.Default.ExportPath.Length > 1)
+            {
+                pPath = Properties.Settings.Default.ExportPath;
+            }
+            fName = fName.Replace(" ", "-");
+            fName = fName.Replace(":", "-");
 
-           
 
-           // Console.WriteLine("Writing " + fName);
-            using (var output = new StreamWriter(Path.Combine(Properties.Settings.Default.ExportPath, fName), false, Encoding.GetEncoding("Windows-1251"))) // добавить дату fname
+            Console.WriteLine("Writing " + fName);
+            using (var output = new StreamWriter(Path.Combine(pPath, fName), false, Encoding.GetEncoding("Windows-1251"))) // добавить дату fname
             {
                 using (var cmd = connection.CreateCommand())
                 {
                     cmd.CommandTimeout = 0;
-                    cmd.CommandText = tableName;
-                    using (var reader = cmd.ExecuteReader())
+                    cmd.CommandText = tableName;// File.ReadAllText(tableName);
+                    try
                     {
-                        
-                        //output.WriteLine("DrugID;PackNx;MnfID;PckID;Segment;Year;Month;IRECID;Series;Quantity;Funds;VendorID;MnfPrice;PrcPrice;RtlPrice;Remark;SrcOrg");
-                          output.WriteLine("DrugID;Segment;Year;Month;Series;TotDrugQn;MnfPrice;PrcPrice;RtlPrice;Funds;VendorID;Remark;SrcOrg");
-
-                        while (reader.Read())
+                        using (var reader = cmd.ExecuteReader())
                         {
-                            for (int i = 0; i < reader.FieldCount; i++)
+                             WriteHeader(reader, output);
+                            while (reader.Read())
                             {
+                                WriteData(reader, output);
 
-                                //    output.Write('|');
-                                String v = reader[i].ToString();
-
-                                output.Write(v);
                             }
-                            //output.Write("|"); // в конце строки разделитель не ставим
-                            output.WriteLine();
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(DateTime.Now.ToString());
+                        Console.Write(ex.ToString());
+                        
                     }
                 }
             }
-            
             timer1.Enabled = false;
-           // button1.Enabled = true;
+            MessageBox.Show("Расчет мониторинга зверешен");
+      
         }
+
+
+        private static void WriteHeader(SqlDataReader reader, TextWriter output)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (i > 0)
+                    output.Write(';');
+                output.Write(reader.GetName(i));
+            }
+            output.Write(';');
+            output.WriteLine();
+        }
+
+        private static void WriteData(SqlDataReader reader, TextWriter output)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (i > 0)
+                    output.Write(';');
+                String v = reader[i].ToString();
+                if (reader[i].GetType().FullName == "System.Decimal")
+                    v = v.Replace(",", ".");
+
+                if (v.Contains(';') || v.Contains('\n') || v.Contains('\r') || v.Contains('"'))
+                {
+                    //output.Write('"');
+                    output.Write(v.Replace("\"", "\"\""));
+                    //output.Write('"');
+                }
+                else
+                {
+
+                    output.Write(v);
+                }
+            }
+            output.Write(";");
+            output.WriteLine();
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {

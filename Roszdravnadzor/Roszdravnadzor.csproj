@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>add.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,10 +83,12 @@
     <EmbeddedResource Include="SQL\Roszdrav.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add.ico" />
     <Content Include="SQL\formatdatetime.sql" />
     <Content Include="SQL\contractors.sql" />
     <Content Include="SQL\getseries.sql" />
     <Content Include="SQL\goods.sql" />
+    <EmbeddedResource Include="SQL\Roszdrav-Zdor.sql" />
     <Content Include="SQL\roszdravnadzor_tbl.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
