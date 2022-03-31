@@ -6,7 +6,7 @@ Year = dbo.formatdatetime('yyyy',getdate()), --                       +';'+   --
 Month = dbo.formatdatetime('mm',getdate()-6), --                         +';'+   --Month
 Series = series_number,   --Series
 TotDrugQn= remain ,      --                +';'+   --TotDrugOn
-MnfPrice = PRICE_PROD, --                   +';'+   --MnfPrice
+MnfPrice = PRICE_PROD*1.1, --                   +';'+   --MnfPrice
 PrcPrice = PRICE_SUP, --                        +';'+   --PrcPrice
 RtlPrice = PRICE_Sal, --                        +';'+   --RtlPrice
 Funds = '0.00' , --                                                     +';'+   --Funds
@@ -17,4 +17,5 @@ SrcOrg =   ''                                                                 --
 --v_remains_roszdrav.* 
 from v_remains_roszdrav , goods
 where v_remains_roszdrav.id_goods = goods.id_goods
-and  price_prod <= DBO.FN_ACTUAL_REGISTER_PRICE_GOODS(id_goods_global)
+and  price_prod <= dbo.FN_ACTUAL_REGISTER_PRICE_GOODS(id_goods_global, GETDATE())
+and PRICE_prod <= (select min(d2a_zhnvls_roszdrav.MaxMnfPrice) from d2a_zhnvls_roszdrav where d2a_zhnvls_roszdrav.DrugID = v_remains_roszdrav.drugid)

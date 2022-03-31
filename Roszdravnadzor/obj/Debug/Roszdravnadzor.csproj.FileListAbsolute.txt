@@ -17,3 +17,13 @@ C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\De
 C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.GenerateResource.cache
 C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.exe
 C:\Users\evgeny\source\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.pdb
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe.config
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.exe
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\bin\Debug\Roszdravnadzor.pdb
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.AssemblyReference.cache
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Form1.resources
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.Properties.Resources.resources
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.GenerateResource.cache
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.csproj.CoreCompileInputs.cache
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.exe
+C:\repos\Rodzdravnadzor\Roszdravnadzor\Roszdravnadzor\obj\Debug\Roszdravnadzor.pdb
