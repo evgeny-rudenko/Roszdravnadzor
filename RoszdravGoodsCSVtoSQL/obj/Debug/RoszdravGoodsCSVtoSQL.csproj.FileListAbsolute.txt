@@ -1,0 +1,7 @@
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\obj\Debug\RoszdravGoodsCSVtoSQL.csproj.AssemblyReference.cache
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\obj\Debug\RoszdravGoodsCSVtoSQL.csproj.CoreCompileInputs.cache
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\bin\Debug\RoszdravGoodsCSVtoSQL.exe.config
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\bin\Debug\RoszdravGoodsCSVtoSQL.exe
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\bin\Debug\RoszdravGoodsCSVtoSQL.pdb
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\obj\Debug\RoszdravGoodsCSVtoSQL.exe
+C:\repos\Rodzdravnadzor\Roszdravnadzor\RoszdravGoodsCSVtoSQL\obj\Debug\RoszdravGoodsCSVtoSQL.pdb
